@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>White-hacker, Web security</title>
+</head>
+<body>
+  <h1><a href="../HomePage.html" title="homepage">8 Hacking technic for white-hacker</a></h1>
+  <h2>Category</h2>
+  <ol>
+    <li><a href="../White-hacker, Web security.html">White-hacker, Web security</a></li>
+    <li>Attack</li>
+    <ul style="margin-left:-20px">
+      <li><a href="Brute force.html">Brute force attack</a></li>
+      <li><a href="Comand injection attack.html">Comand injection attack</a></li>
+      <li><a href="CSRF attack.html">CSRF attack</a></li>
+      <li><a href="File inclusion.html">File inclusion</a></li>
+      <li><a href="File upload.html">File upload</a></li>
+      <li><a href="CAPTCHA attack.html">CAPTCHA attack</a></li>
+      <li><a href="SQL injection.html">SQL injection</a></li>
+    </ul>
+  </ol>
+
+  <h2>File inclusion</h2>
+
+  <ol>
+    <li>PHP에서 주로 발생한다. PHP에서는 include()로 다른 소스 코드를 삽입할 수 있기 때문이다. 이 때, 인클루드 할 파일을 지정할 수 있는 경우에 해커가 그 값을 조작하여 원하는 파일을 처리할 수 있도록 할 수 있다.</li>
+
+    <li style="padding-top:10px">종류
+      <ul style="margin-left:-20px">
+        <li>Local File Inclusion : 이미 시스템에 존재하는 파일을 인클루드한다.</li>
+        <li>Remote File Inclusion : 외부에 있는 파일을 원격으로 인클루드한다.</li>
+      </ul>
+    </li>
+
+    <li style="padding-top:10px">[?변수=http://경로 or https://경로]를 입력하여서 php 변수에 해커가 원하는 파일을 인클루드하여 공격한다.
+      <ul style="margin-left:-20px">
+        <li>[../]를 이용하여 디렉토리를 찾아가면서 LFI공격을 시도할 수 있다. 이것을 트래버설 공격이라한다.</li>
+      </ul>
+    </li>
+
+    <li style="padding-top:10px">대응
+      <ul style="margin-left:-20px">
+        <li>http://, https://, ../, ..\ 등을 공백 처리함으로써 파일 인클루젼 공격을 대응할 수 있다.
+          <ul style="margin-left:-20px">
+            <li>하지만 이 대응은 http:// 사이에 http://를 삽입함으로써 우회할 수 있다. (예, htthttp://p://) 그 이유는 가운데에 http://가 “”으로 공백처리됨으로써 떨어져 있는 htt””p:// => http://가 되기 때문이다.</li>
+            <li>서버는 Set-Cookie 헤더를 이용해 쿠키를 전달하고, 브라우저에서 이를 저장해두었다가 Cookie 헤더에 전송한다.</li>
+          </ul>
+        </li>
+        <li>개발자가 원하는 파일만 인클루드하게 설정하는 방법이 있다. (예를 들어, file로 시작되는 파일이나, index.php만 사용한다면 이것을 포함하는 화이트리스트를 만들면 된다.)
+          <ul style="margin-left:-20px">
+            <li>RFI 공격은 막을 수 있지만 LFI 공격은 막을 수 없다. ?page = file/../../../../../etc/paswwd로 공격할 수 있다. file까지만 올바르게 작성하고 ../를 많이 대입하여 루트디렉토리 가는 패스 트래버설 공격을 시도하여 루트 패스워드를 따올 수 있다.</li>
+          </ul>
+        </li>
+        <li>가장 좋은 대응 방법은 사용자의 입력을 통해서 파일이 인클루드 되지 않게끔 하는 것이지만, 어쩔 수 없다면 4-2방법보다 더 엄격하게 특정 문자열을 포함하는 파일을 화이트리스트화 시키는 것이 아니라, 개발자가 원하는 파일만 일일이 리스트화 시키는 방법이다.</li>
+      </ul>
+    </li>
+  </ol>
+</body>
+</html>
