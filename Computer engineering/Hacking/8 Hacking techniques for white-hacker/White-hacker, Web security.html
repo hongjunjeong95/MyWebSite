@@ -5,59 +5,64 @@
   <title>White-hacker, Web security</title>
 </head>
 <body>
-  <h1><a href="8 Hack Techniques.html" title="8 Hack Techniques">8 Hacking techniques for white-hacker</a></h1>
-  <h2>Category</h2>
-  <ol>
-    <li><a href="White-hacker, Web security.html">White-hacker, Web security</a></li>
-    <li>Attack</li>
-    <ul style="margin-left:-20px">
-      <li><a href="Attack/Brute force.html">Brute force attack</a></li>
-      <li><a href="Attack/Comand injection attack.html">Comand injection attack</a></li>
-      <li><a href="Attack/CSRF attack.html">CSRF attack</a></li>
-      <li><a href="Attack/File inclusion.html">File inclusion</a></li>
-      <li><a href="Attack/File upload.html">File upload</a></li>
-      <li><a href="Attack/CAPTCHA attack.html">CAPTCHA attack</a></li>
-      <li><a href="Attack/SQL injection.html">SQL injection</a></li>
-    </ul>
-  </ol>
-
-  <h2>White-hacker, Web security</h2>
-
-  <ol>
-    <li>보안 취약점과 해킹</li>
-      <img src="Basic steps of hacking.jpg" alt="해킹 루틴" width="450px" style="margin-left:-20px">
-
-    <li style="padding-top:">웹 보안의 중요성
+  <header>
+    <h1><a href="8 Hack Techniques.html" title="8 Hack Techniques">8 Hacking techniques for white-hacker</a></h1>
+  </header>
+  <nav>
+    <h2>Category</h2>
+    <ol>
+      <li><a href="White-hacker, Web security.html">White-hacker, Web security</a></li>
+      <li>Attack</li>
       <ul style="margin-left:-20px">
-        <li>웹은 방화벽에 대해서 항상 열려 있다.</li>
-        <li>모의 해킹의 관문이다.</li>
-        <li>모바일 앱도 웹과 통신한다.</li>
+        <li><a href="Attack/Brute force.html">Brute force attack</a></li>
+        <li><a href="Attack/Comand injection attack.html">Comand injection attack</a></li>
+        <li><a href="Attack/CSRF attack.html">CSRF attack</a></li>
+        <li><a href="Attack/File inclusion.html">File inclusion</a></li>
+        <li><a href="Attack/File upload.html">File upload</a></li>
+        <li><a href="Attack/CAPTCHA attack.html">CAPTCHA attack</a></li>
+        <li><a href="Attack/SQL injection.html">SQL injection</a></li>
       </ul>
-    </li>
+    </ol>
+  </nav>
+  <article>
+    <h2>White-hacker, Web security</h2>
 
-    <li style="padding-top:10px">웹 아키텍쳐</li>
-      <img src="Web architecture.jpg" width="450px" style="margin-left:-20px">
-      <ul style="margin-left:-20px">
-        <li>로직 티어는 웹사이트의 각종 메뉴들을 서비스하고 클라이언트의 요청을 처리해준다.</li>
-        <li>데이터 티어는 로직 티어의 요청에 따라서 데이터를 돌려주고 로직 티어는 이 데이터를 가공하여 최종적으로 클라이언트에게 전달한다.</li>
-      </ul>
+    <ol>
+      <li>보안 취약점과 해킹</li>
+        <img src="Basic steps of hacking.jpg" alt="해킹 루틴" width="450px" style="margin-left:-20px">
 
-    <li style="padding-top:10px">세션 유지와 쿠키
-      <ul style="margin-left:-20px">
-        <li>HTTP는 stateless이기 때문에 세션 ID를 사용해서 이전 상태를 유지한다.</li>
-        <li>세션 ID는 보통 쿠키로 전달한다.</li>
-        <li>쿠키란?</li>
-          <ul style="margin-left:-20px">
-            <li>변수 = 값의 집합</li>
-            <li>서버는 Set-Cookie 헤더를 이용해 쿠키를 전달하고, 브라우저에서 이를 저장해두었다가 Cookie 헤더에 전송한다.</li>
-          </ul>
-        <li><strong style="color:red">세션 ID를 탈취함으로써 세션 하이재킹 공격이 가능한다.</strong></li>
-      </ul>
-    </li>
+      <li style="padding-top:">웹 보안의 중요성
+        <ul style="margin-left:-20px">
+          <li>웹은 방화벽에 대해서 항상 열려 있다.</li>
+          <li>모의 해킹의 관문이다.</li>
+          <li>모바일 앱도 웹과 통신한다.</li>
+        </ul>
+      </li>
 
-    <li style="padding-top:10px">Http 프록시를 이용하면 Http 요청과 응답을 중간에서 가로챌 수 있다. 메시지 내용을 볼 수 있고 수정해서 보낼 수가 있다. 웹 해킹이나 웹 보안 취약점을 찾을 때 아주 유용하다. (대표 프로그램 Burp Suite)</li>
+      <li style="padding-top:10px">웹 아키텍쳐</li>
+        <img src="Web architecture.jpg" width="450px" style="margin-left:-20px">
+        <ul style="margin-left:-20px">
+          <li>로직 티어는 웹사이트의 각종 메뉴들을 서비스하고 클라이언트의 요청을 처리해준다.</li>
+          <li>데이터 티어는 로직 티어의 요청에 따라서 데이터를 돌려주고 로직 티어는 이 데이터를 가공하여 최종적으로 클라이언트에게 전달한다.</li>
+        </ul>
 
-    <li style="padding-top:10px">웹 서버를 다시 실행시키려면 # /opt/lampp/lampp restart를 입력해야 한다.</li>
-  </ol>
+      <li style="padding-top:10px">세션 유지와 쿠키
+        <ul style="margin-left:-20px">
+          <li>HTTP는 stateless이기 때문에 세션 ID를 사용해서 이전 상태를 유지한다.</li>
+          <li>세션 ID는 보통 쿠키로 전달한다.</li>
+          <li>쿠키란?</li>
+            <ul style="margin-left:-20px">
+              <li>변수 = 값의 집합</li>
+              <li>서버는 Set-Cookie 헤더를 이용해 쿠키를 전달하고, 브라우저에서 이를 저장해두었다가 Cookie 헤더에 전송한다.</li>
+            </ul>
+          <li><strong style="color:red">세션 ID를 탈취함으로써 세션 하이재킹 공격이 가능한다.</strong></li>
+        </ul>
+      </li>
+
+      <li style="padding-top:10px">Http 프록시를 이용하면 Http 요청과 응답을 중간에서 가로챌 수 있다. 메시지 내용을 볼 수 있고 수정해서 보낼 수가 있다. 웹 해킹이나 웹 보안 취약점을 찾을 때 아주 유용하다. (대표 프로그램 Burp Suite)</li>
+
+      <li style="padding-top:10px">웹 서버를 다시 실행시키려면 # /opt/lampp/lampp restart를 입력해야 한다.</li>
+    </ol>
+  </article>
 </body>
 </html>
