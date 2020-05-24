@@ -21,7 +21,7 @@ a{
           rgba(0, 0, 0, 0.3)
         ),
         /* bottom, image */
-        url("/img/galaxy.jpg");
+        url("./img/galaxy.jpg");
     top:0;
     left:0;
     right:0;
@@ -48,6 +48,7 @@ a{
   /*margin:0 auto;*/
   display:grid;
   grid-template-columns: 190px 1fr;
+    font-size: 16px;
 }
 
 .Home_header{
@@ -63,7 +64,7 @@ a{
     display:grid;
     grid-template-columns: 2fr 1.2fr;
     margin: 35px 0 0 10px;
-    font-size: 1.5rem;
+    font-size: 24px;
     font-weight:bold;
 }
 
