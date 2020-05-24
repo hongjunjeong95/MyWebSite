@@ -1,18 +1,63 @@
 <!doctype html>
 <html>
+
 <head>
   <meta charset="utf-8">
   <title>My Web Site Homepage</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Nanum+Myeongjo:wght@700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100&display=swap" rel="stylesheet">
 </head>
 <body>
-  <header>
-    <h1><a href="HomePage.html" title="Homepage">My Web Site Homepage</a></h1>
+ <div id="wrap">
+  <header id="header">
+    <nav class="navbar">
+      <div class="container">
+        <div class="Home_header font-color">
+            <h1><a href="HomePage.html" title="Homepage" >My Web Site Homepage</a></h1>
+        </div>
+        <div class="navbar-menu">
+          <div class="navbar-left">
+            <ul>
+               <li class="font-color">
+                   <a href="Computer engineering/Computer engineering.html" >Computer</a>
+                   <ul class="subcourses">
+                       <li class="font-color">
+                           <a href="./Computer%20engineering/Hacking.html">Hacking</a>
+                       </li>
+                       <li class="font-color"><a href="#">Language</a></li>
+                       <li class="font-color"><a href="#">Linux</a></li>
+                       <li class="font-color"><a href="#">Operating System</a></li>
+                   </ul>
+               </li>
+               <li class="font-color">
+                   <a href="#" class="Photo">Photo</a>
+               </li>
+            </ul>
+          </div>
+          <div class="navbar-right">
+            <div class="search_bar">
+                <form action="">
+                    <input type="text" name="search" placeholder="search">
+                </form>
+            </div>
+            <div class="user_manage">
+             <a href="#" class="button font-color space-sign signin">Sign in</a>
+             <a href="/signup" class="button font-color signup">Sign up</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </nav>
   </header>
-  <h2>Category</h2>
-  <nav>
-    <ol>
-      <li><a href="Computer engineering/Computer engineering.html">Computer engineering</a></li>
-    </ol>
-  </nav>
+
+  <div id="content">
+  </div>
+  <footer>
+      <div>
+
+      </div>
+  </footer>
+  </div>
 </body>
 </html>
