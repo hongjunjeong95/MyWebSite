@@ -1,0 +1,175 @@
+*{
+    box-sizing: border-box;
+}
+
+ul{
+    list-style: none;
+    padding:0px;
+}
+
+a{
+    text-decoration:none;
+    cursor : pointer;
+    color: white;
+}
+
+#wrap{
+    background:
+        /* top, transparent black, faked with gradient */ 
+        linear-gradient(
+          rgba(0, 0, 0, 0.3), 
+          rgba(0, 0, 0, 0.3)
+        ),
+        /* bottom, image */
+        url("../img/galaxy.jpg");
+    top:0;
+    left:0;
+    right:0;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    position: absolute;
+
+    height:100%;
+    margin: 0 auto;
+    color:aliceblue;
+}
+
+.navbar{
+
+}
+
+#header {
+    font-family: 'Roboto Slab', serif;
+}
+
+.container{
+  /*margin:0 auto;*/
+  display:grid;
+  grid-template-columns: 190px 1fr;
+    font-size: 16px;
+}
+
+.Home_header{
+    margin: 10px 20px 20px 30px;    
+}
+
+.Home_header a{
+    display: block;
+    height:80px;
+}
+
+.navbar-menu{
+    display:grid;
+    grid-template-columns: 2fr 1.2fr;
+    margin: 35px 0 0 10px;
+    font-size: 24px;
+    font-weight:bold;
+}
+
+.navbar-left > ul{
+  display:grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.navbar-left > ul {
+    //width:100%;
+    margin:0;
+    //border: 5px solid gray;
+    display: grid;
+    grid-template-columns: 1fr 1fr 3fr;
+}
+
+.navbar-left > ul > li{
+    margin-right: 40px;  
+}
+
+.navbar-left > ul > li > a{
+    display: block;
+    height:50px;
+    padding-top:10px;
+    padding-bottom: 7px;
+}
+
+.hover-me li:hover > .subcourses{
+    display: block;
+}
+
+.subcourses {
+    width:140px;
+    position: absolute;
+    display:none;
+    box-sizing: inherit;
+}
+
+.subcourses > ul > li > a{
+    display: block;
+    padding-top:3px;
+}
+
+.hover-me > li:hover > .subcourses2 {
+   display: block;
+}
+
+.subcourses2{
+    width:130px;
+    position: absolute;
+    top:0px;
+    left:130px;
+    display:none;
+    box-sizing: inherit;
+}
+
+.subcourses2 > ul > li > a{
+    display: block;
+    padding-top:3px;
+}
+
+.photo{
+    display: block;
+    width:50px;
+}
+
+.navbar-right{
+  display:grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.user_manage{
+    margin-right: 30px;
+    //margin: 0 auto;
+}
+
+.space-sign{
+    padding:8px;
+    border:1px;  
+}
+
+.font-color{
+    background: linear-gradient(to right, #c274c3, #5b7aff 70%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.ul-font-color > li{
+    background: linear-gradient(to right, #c274c3, #5b7aff 70%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.ul-font-color > li:hover{
+    background: linear-gradient(to left, #c274c3 10%, #5b7aff 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.font-color:hover{
+     background: linear-gradient(to left, #c274c3 10%, #5b7aff 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.search_bar {
+    height:50%;
+    padding-left: 39px;
+}
