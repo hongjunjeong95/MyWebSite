@@ -1,5 +1,5 @@
 *{
-    box-sizing: border-box;
+    //box-sizing: border-box;
 }
 
 ul{
@@ -52,7 +52,8 @@ a{
 }
 
 .Home_header{
-    margin: 10px 20px 20px 30px;    
+    margin: 10px 20px 20px 30px;
+    //transition: 0.9s;
 }
 
 .Home_header a{
@@ -97,10 +98,16 @@ a{
 }
 
 .subcourses {
-    width:140px;
-    position: absolute;
+    width:125px;
+    //position: absolute;
+    position: relative;
     display:none;
     box-sizing: inherit;
+}
+
+.subcourses > ul > li{
+    border: 1px solid #5b7aff;
+    border-radius: 6px;
 }
 
 .subcourses > ul > li > a{
@@ -113,12 +120,18 @@ a{
 }
 
 .subcourses2{
-    width:130px;
+    width:125px;
     position: absolute;
     top:0px;
-    left:130px;
+    left:125px;
     display:none;
     box-sizing: inherit;
+}
+
+.subcourses2 > ul > li{
+    width:230px;
+    border: 1px solid #5b7aff;
+    border-radius: 6px;
 }
 
 .subcourses2 > ul > li > a{
@@ -138,13 +151,10 @@ a{
 
 .user_manage{
     margin-right: 30px;
-    //margin: 0 auto;
+    padding-left:8px;
 }
 
-.space-sign{
-    padding:8px;
-    border:1px;  
-}
+
 
 .font-color{
     background: linear-gradient(to right, #c274c3, #5b7aff 70%);
@@ -169,7 +179,61 @@ a{
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
+
 .search_bar {
-    height:50%;
     padding-left: 39px;
+}
+
+#content{
+	//position: relative;
+    position: absolute;
+	top: 50%;
+	left: 50%;
+    transform: translate(-50%,-50%);
+}
+
+#content h1{
+	font-size: 100px;
+	text-transform: uppercase;
+	font-weight: 900;
+	color: #2c3e5056;
+	background-image: url(../img/water.png);
+	-webkit-background-clip:text;
+    //-webkit-text-fill-color:transparent;
+	animation: water 15s infinite;
+}
+
+@media(max-width:900px){
+    .navbar-left{
+        display:none;
+    }
+    input{
+        //margin-right: 20px;
+        width:130px;
+        transition: .5s;
+    }
+}
+
+@media(max-width:1324px){
+    .navbar-right{
+        position: absolute;
+        right: 30px;
+    }
+}
+
+@media(max-width:620px){
+    .navbar-right{
+        position:relative;
+        right:30px;
+    }
+
+}
+
+@keyframes water {
+	from{
+		background-position: left 0px top 0;
+	}
+	to{
+		background-position: left 1000px top 0px;
+	}
 }
